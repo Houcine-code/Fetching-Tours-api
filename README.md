@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# birthday-reminder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+birthday reminder with ReactJs
 
-## Available Scripts
+I have NodeJs, npm, npx, yarn, git and Vscode installed
 
-In the project directory, you can run:
+In Terminal:
 
-### `yarn start`
+```
+node -v
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+: v14.17.6
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm -v
+```
 
-### `yarn test`
+: 8.1.3
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+yarn -v
+```
 
-### `yarn build`
+: 1.22.17
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I create a local react project with npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In Terminal:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npx create-react-app my-birthday-reminder
+```
 
-### `yarn eject`
+I Create a public repository with the same name "my-birthday-reminder" on github.com
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I Create Readme.md file
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+in the local project folder
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In Terminal:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+cd ../my-birthday-reminder
+```
 
-## Learn More
+initiating an empty repo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In Terminal:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+git init
+```
 
-### Code Splitting
+Adding this repository as a remote to our project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+git remote add "name-of-remote" "url-of-repository"
 
-### Analyzing the Bundle Size
+In Terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+git remote add origin https://github.com/Houcine-code/my-birthday-reminder
+```
 
-### Making a Progressive Web App
+configuring an upstream branch and setting the remote as origin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+In Terminal:
 
-### Advanced Configuration
+```
+git push --set-upstream origin master
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+installing gh-pages
 
-### Deployment
+In Terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+yarn add gh-pages
+```
 
-### `yarn build` fails to minify
+I added two keys to the scripts value in the package.json
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In Terminal:
+
+```
+ "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+  },
+```
+
+I added the homepage field in the package.json
+
+https://username.github.io/repository-name/
+
+In Terminal:
+
+```
+"homepage": "https://Houcine-code.github.io/my-birthday-reminder/",
+```
+
+Finnaly deploying my application:
+
+In Terminal:
+
+```
+npm run deploy
+```
+
+If Git Autentiqation needed
+
+```
+Username for 'https://github.com': username
+Password for 'https://Houcine-code@github.com': password
+```
